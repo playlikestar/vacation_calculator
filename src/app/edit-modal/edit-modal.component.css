@@ -1,0 +1,92 @@
+form{
+    width: 50%;
+}
+.container{
+    background-color: rgb(255, 255, 255);
+    height: 500px;
+    width: 75%;
+    border-radius: 17px;
+    padding: 0;
+}
+.input_container{
+    width: 23%;
+    margin: 40px;
+    margin-right: -36px;
+    background-color:#f7f0f0;
+    padding: 10px;
+    padding-bottom: 20px;
+    padding-right: 15px;
+}
+.inputfield{
+    margin-top: -17px;
+    padding: 20px;
+    border: 2px solid #545cb9;
+    background-color:#f2f2f2
+}
+.modal-header{
+    height: 10%;
+    background-color:#1f7f79;
+    border-radius:17px;
+    color: white;
+    border-bottom: 0;
+}
+.input-label{
+    background-color:#f2f2f2;
+    margin-left: 20px;
+    color: #6971c7;
+}
+.inputs{
+    display: flex;
+}
+.close-button{
+    background-color:#c03e3e;
+    color: white;
+    width: 24%;
+    padding: 6px;
+    font-size: 20px;
+}
+.save-button{
+    background-color:#3ec0b7;
+    color: white;
+    width: 24%;
+    padding: 6px;
+    font-size: 20px;
+    margin-left: 45px;
+    margin-right: 15px;
+}
+.container{
+    position: relative;
+}
+.buttons_container{
+    position: absolute;
+    bottom: 23px;
+    width: 100%;
+    display: flex;
+    justify-content: end;
+}
+.btn{
+    border-radius:10px;
+}
+.months_select{
+    width: 30%;
+    height: 8%;
+    padding: 0;
+    background-color:#545cb9;
+    padding: 10px;
+    color: white;
+    text-align: center;
+    font-size: 18px;
+    margin-top: 20px;
+    
+}
+.monthsHours{
+    width: 30%;
+    margin-top: 20px;
+    text-align: center;
+    margin-left: 120px;
+    font-size: 18px;
+}
+.monthshours_container{
+    display: flex;
+    justify-content: space-between;
+}

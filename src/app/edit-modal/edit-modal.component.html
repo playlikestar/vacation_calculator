@@ -1,0 +1,39 @@
+<div class="container">
+  <div class="modal-header">
+    {{modalheaderName}}
+  </div>
+  <div class="inputs">
+    <div class="input_container">
+      <label for="" class="input-label">Name</label>
+      <input (input)="inputpressName()" value="{{nameinModal}}" type="text" class="form-control inputfield" placeholder="Name" #nameInput>
+    </div>
+    <div class="input_container">
+      <label for="" class="input-label">familyName</label>
+      <input  (input)="inputpressFamilyname()" value="{{familynameinModal}}" type="text" class="form-control inputfield" placeholder="familyName"
+        #familynameInput>
+    </div>
+  </div>
+  <div class="buttons_container">
+    <button class="btn close-button" (click)="closeModal()">close</button>
+    <button class="btn save-button" (click)="saveModal()">save</button>
+  </div>
+  <div class="monthshours_container"><input (input)="inputPressHours()" #hoursInput placeholder="Hours per {{selectValue}} :" type="text"  class="form-control inputfield monthsHours"  value="{{hoursinModal}}">
+    <select class="months_select" (click)="setMonthInput()" #selectOpt>
+      <option>December</option>
+      <option>January</option>
+      <option>February</option>
+      <option>March</option>
+      <option>April</option>
+      <option>May</option>
+      <option>June</option>
+      <option>July</option>
+      <option>August</option>
+      <option>September</option>
+      <option>October</option>
+      <option>November</option>
+    </select>
+    <div class="inputs"></div>
+
+
+
+  </div>
