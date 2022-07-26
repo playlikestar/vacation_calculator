@@ -90,3 +90,27 @@ form{
     display: flex;
     justify-content: space-between;
 }
+.totalHours{
+    width: 30%;
+    background-color:green;
+    color: white;
+    margin-top: 60px;
+    margin-left: 150px;
+    padding: 10px;
+    text-align: center;
+    font-size: 18px;
+}
+.vacationDays{
+    width: 30%;
+    background-color:green;
+    color: white;
+    margin-top: 60px;
+    margin-left: 200px;
+    padding: 10px;
+    text-align: center;
+    font-size: 18px;
+}
+.hours_vacation_container{
+    display: flex;
+    width: 100%;
+}

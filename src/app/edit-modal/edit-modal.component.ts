@@ -20,6 +20,7 @@ export class EditModalComponent implements OnInit, AfterContentChecked, AfterCon
   @Input() hoursinModal = '';
   @Input() nameinModal = '';
   @Input() familynameinModal = '';
+@Input() totalhoursinModal=0;
   @Input() modalheaderName = 'Add Student Vacation';
   @Input() type: string;
 
@@ -139,8 +140,8 @@ export class EditModalComponent implements OnInit, AfterContentChecked, AfterCon
           break;
       }
     
-
-
+      this.student.totalHours=Object.values(this.student.monthHours).reduce((a, b) => +a + +b, 0);
+this.student.vacationDays=Math.floor((this.student.totalHours*5/12)/24);
   }
 ngAfterContentInit(): void {
   if(this.type=='add'){
@@ -159,6 +160,7 @@ ngAfterContentInit(): void {
       november: 0,
     });
   }
+
 }
 
 }

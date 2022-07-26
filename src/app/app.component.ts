@@ -41,25 +41,19 @@ export class AppComponent implements AfterContentChecked {
     november: 30,
   })];
 
-  // modalName = '';
-  // modalfamilyName = '';
-  // modalheaderName = 'Edit Person Vacation';
+
   currentstudentIndex: number;
   currentStudent: Student;
-  // currentselectMonth = 'december';
-  // currentmonthHours= '';
+  currentselectMonth = 'december';
+
+
 
 
   modalControl(type: string) {
     this.modalType = type;
-    // if (type == 'add') {
-    //   this.modalName = '';
-    //   this.modalfamilyName = '';
-    //   this.modalheaderName = 'Add Person Vacation';
-    // } else {
-    //   this.modalheaderName = 'Edit Person Vacation';
-    // }
+ 
     this.modalActive = true;
+    
   }
   studentslistChange(modal: Student) {
     if (this.modalType == 'add' && modal.name != '' && modal.familyName != '') {
@@ -74,18 +68,14 @@ export class AppComponent implements AfterContentChecked {
   }
 
   setModalInputs(event: { student: Student, index: number }) {
-    // this.modalName = event.student.name;
-    // this.modalfamilyName = event.student.familyName;
     this.currentstudentIndex = event.index;
     this.currentStudent = event.student;
   }
 
 ngAfterContentChecked(): void {
   for(let i=0;i<this.students.length;i++){
-    this.students[i].totalHours=0;
-for(let key of Object.values(this.students[i].monthHours)){
-this.students[i].totalHours+=+key;
-}
+    this.students[i].totalHours=Object.values(this.students[i].monthHours).reduce((a, b) => +a + +b, 0);
+    this.students[i].vacationDays=Math.floor((this.students[i].totalHours*5/12)/24);
   }
 }
 
